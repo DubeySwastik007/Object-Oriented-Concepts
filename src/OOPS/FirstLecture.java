@@ -19,6 +19,7 @@ public class FirstLecture {
         Car c1 = new Car("Audi");
         System.out.println(c1.name);
         final Car c2 = new Car("BMW");
+        c2.name = "Mercedes";   //this is allowed
         c2 = c1;                //this is wrong
     }
 }

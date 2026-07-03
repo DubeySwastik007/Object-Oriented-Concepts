@@ -13,20 +13,12 @@ class Student{
     String name;
     int roll_no;
     double marks;
-    //this is not default constructor
-    Student(){
-        this.name = "Aksh Dubey";
-        this.roll_no = 43;
-        this.marks = 432.5;
-    }
-    //Copy Constructor
-    Student(Student other){
-        System.out.println("Copy constructor invoked");
-        this.name = other.name;
-        this.roll_no = other.roll_no;
-        this.marks = other.marks;
-    }
 
+    //Calling a constructor from another constructor
+    Student(){
+        this("Aksh Dubey", 43, 100.0);
+    }
+    //Student() constructor calls this constructor
     Student(String name, int roll_no, double marks){
         this.name = name;
         this.roll_no = roll_no;
@@ -38,9 +30,5 @@ public class FirstLecture {
     public static void main(String[] args){
         Student s1 = new Student();
         System.out.println(s1.name + " " + s1.roll_no + " " + s1.marks);
-        Student s2 = new Student("Swastik Dubey", 41, 213.432);
-        System.out.println(s2.name + " " + s2.roll_no + " " + s2.marks);
-        Student s3 = new Student(s2);
-        System.out.println(s3.name + " " + s3.roll_no + " " + s3.marks);
     }
 }

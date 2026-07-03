@@ -7,7 +7,7 @@ import java.util.Scanner;
 //When no constructor is created then a default constructor is used which initialize the instance variable to null or 0
 //constructor is invoked at the time of object creation
 //this - points to the current object
-
+//Constructor overloading - when different constructors in a class are called according to the parameters list
 
 class Student{
     String name;
@@ -19,13 +19,19 @@ class Student{
         this.roll_no = 43;
         this.marks = 432.5;
     }
+
+    Student(String name, int roll_no, double marks){
+        this.name = name;
+        this.roll_no = roll_no;
+        this.marks = marks;
+    }
 };
 
 public class FirstLecture {
     public static void main(String[] args){
         Student s1 = new Student();
         System.out.println(s1.name + " " + s1.roll_no + " " + s1.marks);
-        Student s2 = new Student();
+        Student s2 = new Student("Swastik Dubey", 41, 213.432);
         System.out.println(s2.name + " " + s2.roll_no + " " + s2.marks);
     }
 }

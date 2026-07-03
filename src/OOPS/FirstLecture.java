@@ -21,7 +21,8 @@ public class FirstLecture {
     public static void main(String[] args){
         Student s1;     //s1 is the reference variable
                         //This is just declaring the reference to the object and not the creation of object
-        s1 = new Student();     //object created using new
+        //object creation and initialization
+        s1 = new Student();
         s1.name = "Swastik";
         s1.roll_no = 43;
         s1.marks = 43;
